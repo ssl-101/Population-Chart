@@ -1,40 +1,49 @@
-//This program will calculate interest earned. 
+//This program displays days with in a month 
+// including leap year adjustments.
 #include <iostream>
-#include <cmath>
-#include <iomanip>
 using namespace std;
 
 int main()
 {
-//variables for calculations.
-  double principal, interestRate, timesCompounded;
 
-//gather user input.
-  cout << " Enter principal amount. (initial investment)."<<endl;
-  cin >> principal;
-  cout << " Enter the interest rate in %."<<endl;
-  cin >> interestRate;
-  cout << "Enter times compounded per year."<<endl;
-  cin >> timesCompounded;
+//Variables
+  int MONTH, YEAR, DAYS;
+  cout << "Enter month: ";
+  cin >> MONTH; 
 
-//Calculations. Starting off with converting % into decimal.
-  double decimalRate = interestRate/100;
+//if else to also verify user entry
+  if (MONTH <1 || MONTH > 12)
+  { 
+    cout << "Invalid entry, must enter a number 1-12"<< endl;
+  }
+  else
+  {
+    cout<<"Enter year:";
+    cin >> YEAR;
+    if (YEAR <0)
+    {
+      cout << "Invalid entry, year must not be negative." << endl;
+    }
+     else
+    {
+      switch(MONTH)
+        {
+          case 4: case 6: case 9: case 11:
+          DAYS = 30; 
+        break;
+          case 2:
+          if ((YEAR % 4 == 0 && YEAR % 100 !=0) || (YEAR % 400 == 0))
+          DAYS = 29;
+       else
+          DAYS = 28;
+        break;
+       default:
+          DAYS = 31;
+          break;
+        }
+      cout << DAYS << "  days in the month."<< endl;
+    }
+  }
   
-//Calculations for final balance.
-  double finalBalance = principal * pow(1 +(decimalRate / timesCompounded), timesCompounded);
-
-//Calculations for interest earned.
-  double interestEarned = finalBalance - principal;
-  
-
-//Conclusion: output display
-  cout << fixed << setprecision(2); 
-  cout << " View Results Below."<<endl;
-  cout << " Interest Rate :"<< interestRate<<endl;
-  cout << " Times Compounded:"<< timesCompounded <<endl;
-  cout << " Principal:"<< principal <<endl;
-  cout << " Interest Earned:" << interestEarned <<endl;
-  cout << " Final Balance:" << finalBalance <<endl;
-   
   return 0;
 }
