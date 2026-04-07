@@ -15,7 +15,7 @@ double RATE, DISTANCE, WEIGHT;
 
  if (WEIGHT <= 0 || WEIGHT > 20 )
  { 
-   cout <<"invalid weight entery, must be between 1 and 20 kg."<< endl;
+   cout <<"invalid weight entry, must be between 1 and 20 kg."<< endl;
    return 0;
  }
   cout << "Enter distance in miles:"<< endl;
@@ -23,7 +23,7 @@ double RATE, DISTANCE, WEIGHT;
  
    if (DISTANCE < 10 || DISTANCE >3000)
    {
-     cout<< "Invalid distance entery, must be between 10 and 3000 miles"<< endl;
+     cout<< "Invalid distance entry, must be between 10 and 3000 miles"<< endl;
      return 0;
    }
   
