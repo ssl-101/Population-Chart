@@ -1,6 +1,7 @@
 //This program will order students alphabetically.
 #include <iostream>
 #include <fstream>
+#include <string> 
 using namespace std;
 
 int main()
@@ -8,14 +9,16 @@ int main()
  string file;
  ifstream inFile;
 
-   inFile.open(file);
 
   cout<< "Enter the file name:";
   cin >> file;
 
+  inFile.open(file);
+
   if (!inFile) {
     cout<< "Error with opening file!"<<endl;
     return 1;
+  }
   
     // starting counter at zero
   string student, first, last;
@@ -42,10 +45,9 @@ int main()
     cout << "Last student in line: " << last << endl;
 
     inFile.close();
-      return 0;
-    
+      
   }
 
-  
+  return 0;
   
 }
