@@ -7,13 +7,17 @@ int main()
 {
 
   string file;
- ifstream file;
+ ifstream inFile;
 
   cout<< "Enter the file name:";
   cin >> file;
 
-  if (!file.open()) {
+  if (!inFile) {
     cout<< "Error with opening file!"<<endl;
+    return(1)
+    
+
+    
   }
 
   
