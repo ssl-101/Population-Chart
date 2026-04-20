@@ -19,12 +19,12 @@ int main()
   
     // starting counter at zero
   string student, first, last;
-    int count 0;
+    int count = 0;
 
     if (inFile >> student)
 
     {
-      count++
+      count++;
         
         if(student < first)
            first = student;
@@ -41,7 +41,7 @@ int main()
     cout<< "First student in line: "<< first << endl;
     cout << "Last student in line: " << last << endl;
 
-    inFile.close()
+    inFile.close();
       return 0;
     
   }
