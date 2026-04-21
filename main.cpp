@@ -15,7 +15,7 @@ int main()
   string file;
   ifstream inFile;
 
-  const perPeople = 1000;
+  const int perPeople = 1000;
 
  cout<< "Enter file name: "<<endl;
  cin >> file ;
@@ -35,8 +35,8 @@ int main()
 
   while (inFile >> POP) {
     cout << year<<":";
-    int STARS = population/popAmount;
-    for (int i = 0); i <STARS; i++)
+    int STARS = POP/popAmount;
+    for (int i= 0; i <STARS; i++)
    {
   cout <<"*";
    }
@@ -46,6 +46,6 @@ int main()
   inFile.close();
 
 
-  return0;
+  return 0;
   
 }
