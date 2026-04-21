@@ -5,8 +5,7 @@
 #include <string>
 
 using namespace std;
-
-int main;
+int main()
 {
 
   const int popAmount = 1000; //population
