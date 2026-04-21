@@ -28,8 +28,25 @@ int main;
       return 1;
   }
 
-  cout<< "PEOPLE DISPLAY CHART "<< endl;
+  cout<< "POPULATION DISPLAY CHART "<< endl;
   cout<< "(Every * displays 1000 people)" <<endl;
 
+  int POP;
+  int year= beginingYear;
+
+  while (inFile >> POP) {
+    cout << year<<":";
+    int STARS = population/popAmount;
+    for (int i = 0); i <STARS; i++)
+   {
+  cout <<"*";
+   }
+  cout <<endl:
+  year += betweenInt;
+  }
+  inFile.close();
+
+
+  return0;
   
 }
